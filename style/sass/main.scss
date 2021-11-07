@@ -56,6 +56,65 @@ a {
   }
 }
 
+.main-title {
+  text-transform: uppercase;
+  margin: 0 auto 80px;
+  border: 2px solid black;
+  padding: 10px 20px;
+  font-size: 30px;
+  width: fit-content;
+  position: relative;
+  width: fit-content;
+  text-align: center;
+  z-index: 1;
+  transition: var(--main-transition);
+  &::before,
+  &::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    background: #2196f3;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translateY(-50%);
+  }
+  &::after {
+    right: -40px;
+  }
+  &::before {
+    left: -40px;
+  }
+  &:hover {
+    color: white;
+    border: 2px solid white;
+    transition-delay: 0.5s;
+  }
+  &:hover::before {
+    animation: left-move 0.5s linear forwards;
+    -webkit-animation: left-move 0.5s linear forwards;
+  }
+  &:hover::after {
+    animation: right-move 0.5s linear forwards;
+    -webkit-animation: right-move 0.5s linear forwards;
+  }
+}
+
 @import "variables";
 @import "header";
 @import "landing";
+@import "article";
+@import "gallery";
+@import "feature";
+@import "testimonials";
+@import "team";
+@import "services";
+@import "ourskills";
+@import "work-steps";
+@import "events";
+@import "pricing";
+@import "videos";
+@import "stats";
+@import "discount";
+@import "footer";

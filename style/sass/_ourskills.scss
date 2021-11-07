@@ -1,0 +1,56 @@
+.our-skills{
+    padding: 100px 20px;
+    .main-title{
+        @extend .main-title;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+    }
+
+    .skills{
+        flex: 1;
+        h3{
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 10px;
+            font-size: 24px;
+            span{
+                font-size: 14px;
+                border: 1px solid #777;
+                border-radius: 6px;
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+                -ms-border-radius: 6px;
+                -o-border-radius: 6px;
+                color: $main-color;
+                padding: 4px;
+            }
+        }
+        .the-progress{
+            height: 30px;
+            background: #eee;
+            position: relative;
+            margin: 3px auto 15px;
+            span{
+                position:absolute;
+                top: 0;
+                left: 0;
+                background: $main-color;
+                height: 100%;
+                transition: width 0.5s linear;
+                -webkit-transition: width 0.5s linear;
+                -moz-transition: width 0.5s linear;
+                -ms-transition: width 0.5s linear;
+                -o-transition: width 0.5s linear;
+}
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .our-skills img{
+        display: none;
+    }
+    
+}

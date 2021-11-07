@@ -1,0 +1,122 @@
+.pricing{
+    background: #ececec;
+    padding: 100px 20px;
+    .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(300px, 1fr));
+    }
+    .box{
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        justify-self: center;
+        box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.15);
+        border: none;
+        background: white;
+        .title{
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        img{
+            max-width: 75px;
+        }
+        .price{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            .amount{
+                font-size: 50px;
+                font-weight: bold;
+                color:$main-color;
+                margin-bottom: 7px;
+            }
+            .time{
+                color: #777;
+            }
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            li{
+                text-align: start;
+                font-size: 24px;
+                padding: 20px;
+                border-top: 1px solid #eee;
+                &::before{
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 900; 
+                    content: "\f00c";
+                    margin-right: 10px;
+                    color: $main-color;
+                
+                }
+            }
+            
+        }
+        a{
+            color: $main-color;
+            border: 1px solid $main-color;
+            margin: 30px;
+            &:hover{
+                background: $main-color;
+                color: white;
+            }
+        }
+        &::before,&::after{
+            content: '';
+            width: 0;
+            height: 50%;
+            position: absolute;
+            background: #f6f6f6;
+            z-index: -1;
+            transition: 0.4s;
+            -webkit-transition: 0.4s;
+            -moz-transition: 0.4s;
+            -ms-transition: 0.4s;
+            -o-transition: 0.4s;
+        }
+        &::before{
+            top: 0;
+            left: 0;
+        }
+        &::after{
+            top: 50%;
+            right: 0;
+        }
+        &:hover::before,&:hover::after{
+            width: 100%;
+        }
+    }
+    .box:not(.popular){
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+    }
+    .popular{
+        .label{
+            position: absolute;
+            writing-mode: vertical-lr;
+            background-color: $main-color;
+            color: white;
+            font-weight: bold;
+            padding: 10px 10px 35px 10px;
+            font-size: 18px;
+            right: 20px;
+            width: 40px;
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                border-style: solid;
+                border-color: transparent transparent white;
+                border-width: 20px;
+            }
+        }
+    }
+}
