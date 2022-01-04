@@ -46,6 +46,10 @@ let count = setInterval(()=>{
 
     if (dateDiff <= 0) {
         clearInterval(count);
+        document.querySelector('.days').innerHTML = '00';
+        document.querySelector('.hours').innerHTML = '00';
+        document.querySelector('.minutes').innerHTML = '00';
+        document.querySelector('.seconds').innerHTML = '00';
     }
 },1000);
 
